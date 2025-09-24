@@ -48,7 +48,7 @@ module Maildown
     end
 
     def self.default_html_block
-      ->(string) { Kramdown::Document.new(string, input: "GFM").to_html }
+      ->(string) { Kramdown::Document.new(string.to_s, input: "GFM").to_html }
     end
 
     def self.default_text_block
